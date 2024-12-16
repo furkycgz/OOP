@@ -1,0 +1,152 @@
+================
+Ad : Chai
+KategoriIndex  :1
+BirimAgirligi:  10 boxes x 20 bags
+BirimFiyatı : 18.0
+StokMiktari : 39.0
+================
+Ad : Chang
+KategoriIndex  :1
+BirimAgirligi: 24 - 12 oz bottles
+
+BirimFiyatı : 19.0
+StokMiktari : 17.0
+================
+Ad : Aniseed Syrup
+KategoriIndex  :2
+BirimAgirligi: 12 - 550 ml bottles
+BirimFiyatı : 10.0
+StokMiktari : 13.0
+================
+Ad : Chef Anton's Cajun Seasoning
+KategoriIndex  :2
+BirimAgirligi: 48 - 6 oz jars
+BirimFiyatı : 22.0
+StokMiktari : 53.0
+================
+Ad : Chef Anton's Gumbo Mix
+KategoriIndex  :2
+BirimAgirligi: 36 boxes
+BirimFiyatı : 21.35
+StokMiktari : 0.0
+================
+Ad : Grandma's Boysenberry Spread
+KategoriIndex  :2
+BirimAgirligi: 12 - 8 oz jars
+BirimFiyatı : 25.0
+StokMiktari : 120.0
+================
+Ad : Uncle Bob's Organic Dried Pears
+KategoriIndex  :5
+BirimAgirligi: 12 - 1 lb pkgs
+BirimFiyatı : 30.0
+StokMiktari : 15.0
+================
+Ad : Northwoods Cranberry Sauce
+KategoriIndex  :2
+BirimAgirligi: 12 - 12 oz jars
+BirimFiyatı : 40.0
+StokMiktari : 0.0
+================
+Ad : Mishi Kobe Niku
+KategoriIndex  :4
+BirimAgirligi: 18 - 500 g pkgs
+BirimFiyatı : 97.0
+StokMiktari : 29.0
+================
+Ad : Ikura
+
+KategoriIndex  :5
+BirimAgirligi: 12 - 200 ml jars
+BirimFiyatı : 31.0
+StokMiktari : 31.0
+================
+Ad : Queso Cabrales
+KategoriIndex  :4
+BirimAgirligi: 1 kg pkg
+BirimFiyatı : 21.0
+StokMiktari : 22.0
+================
+Ad : Queso Manchego La Pastora
+KategoriIndex  :4
+BirimAgirligi: 10 - 500 g pkgs.
+BirimFiyatı : 38.0
+StokMiktari : 86.0
+================
+Ad : Konbu
+KategoriIndex  :3
+BirimAgirligi: 2 kg box 
+BirimFiyatı : 6.0
+StokMiktari : 24.0
+================
+Ad : Tofu
+KategoriIndex  :5
+BirimAgirligi: 40 - 100 g pkgs
+BirimFiyatı : 23.25
+StokMiktari : 35.0
+================
+Ad : Genen Shouyu
+KategoriIndex  :22
+BirimAgirligi: 24 - 250 ml bottles
+BirimFiyatı : 15.5
+StokMiktari : 39.0
+================
+Ad : Pavlova
+KategoriIndex  :3
+BirimAgirligi: 32 - 500 g boxes
+BirimFiyatı : 17.45
+StokMiktari : 29.0
+================
+Ad : Alice Mutton
+KategoriIndex  :5
+BirimAgirligi: 20 - 1 kg tins
+BirimFiyatı : 39.0
+StokMiktari : 0.0
+================
+Ad : Carnarvon Tigers
+KategoriIndex  :5
+BirimAgirligi: 16 kg pkg
+BirimFiyatı : 62.5
+StokMiktari : 42.0
+================
+Ad : Teatime Chocolate Biscuits
+KategoriIndex  :3
+BirimAgirligi: 10 boxes x 12 pieces
+BirimFiyatı : 9.2
+StokMiktari : 25.0
+================
+Ad : Sir Rodney's Marmalade
+KategoriIndex  :3
+BirimAgirligi: 30 gift boxes
+BirimFiyatı : 81.0
+StokMiktari : 40.0
+================
+Ad : Sir Rodney's Scones
+KategoriIndex  :3
+BirimAgirligi: 24 pkgs. x 4 pieces
+BirimFiyatı : 10.0
+StokMiktari : 3.0
+================
+Ad : Gustaf's Knäckebröd
+KategoriIndex  :5
+BirimAgirligi: 24 - 500 g pkgs
+BirimFiyatı : 21.0
+StokMiktari : 104.0
+================
+Ad : Tunnbröd
+KategoriIndex  :5
+BirimAgirligi: 12 - 250 g pkgs
+BirimFiyatı : 9.0
+StokMiktari : 61.0
+================
+Ad : Guaraná Fantástica
+KategoriIndex  :1
+BirimAgirligi: 12 - 355 ml cans
+BirimFiyatı : 4.5
+StokMiktari : 20.0
+================
+Ad : NuNuCa Nuß-Nougat-Creme
+KategoriIndex  :3
+BirimAgirligi: 20 - 450 g glasses
+BirimFiyatı : 14.0
+StokMiktari : 0.0
