@@ -1,0 +1,10 @@
+1, 34ABC123, Toyota Corolla, Benzin, Manuel, 500, Müsait, 10 km
+2, 06DEF456, Volkswagen Passat, Dizel, Otomatik, 750, Kirada, 200 km
+3, 35GHI789, Tesla Model 3, Elektrikli, Otomatik, 1000, Müsait, 23 km
+4, 16JKL321, Renault Megane, Benzin, Otomatik, 600, Bakımda, 80 km
+5, 27MNO654, Honda Civic, Dizel, Manuel, 550, Müsait, 15 km
+6, 42PQR987, BMW 3 Series, Dizel, Otomatik, 900, Kirada, 180 km
+7, 55STU111, Mercedes A-Class, Benzin, Otomatik, 950, Müsait, 100 km
+8, 07VWX222, Nissan Qashqai, Dizel, Manuel, 700, Bakımda, 22 km
+9, 09YZA333, Ford Focus, Benzin, Manuel, 580, Müsait, 130 km
+10, 10BCD444, Audi A4, Dizel, Otomatik, 850, Kirada, 170 km
