@@ -12,7 +12,7 @@ import java.util.Optional;
 class RezervasyonYonetici {
     private List<Rezervasyon> rezervasyonlar;
     private final String dosyaYolu = "rezervasyonlar.txt";
-    private List<Integer> silinenIdler; // Silinen id'leri tutmak için
+    private List<Integer> silinenIdler; 
 
     public RezervasyonYonetici() {
         rezervasyonlar = new ArrayList<>();
@@ -23,9 +23,9 @@ class RezervasyonYonetici {
     public void rezervasyonEkle(String musteriAdi, String musteriSoyadi, LocalDateTime rezervasyonZamani) {
         int yeniId;
         if (silinenIdler.isEmpty()) {
-            yeniId = rezervasyonlar.size() + 1; // Eğer silinen id yoksa, sıradaki yeni id'yi kullan
+            yeniId = rezervasyonlar.size() + 1;
         } else {
-            yeniId = silinenIdler.remove(0); // Silinen id'yi al
+            yeniId = silinenIdler.remove(0); 
         }
         Rezervasyon rezervasyon = new Rezervasyon(yeniId, musteriAdi, musteriSoyadi, rezervasyonZamani);
         rezervasyonlar.add(rezervasyon);
@@ -49,7 +49,7 @@ class RezervasyonYonetici {
         
         if (rezervasyonOpt.isPresent()) {
             rezervasyonlar.remove(rezervasyonOpt.get());
-            silinenIdler.add(id); // Silinen id'yi kaydet
+            silinenIdler.add(id); 
             System.out.println("Rezervasyon başarıyla silindi.");
             dosyayaKaydet();
         } else {
@@ -86,18 +86,17 @@ class RezervasyonYonetici {
         try (BufferedReader reader = new BufferedReader(new FileReader(dosyaYolu))) {
             String satir;
             while ((satir = reader.readLine()) != null) {
-                if (satir.matches("\\d+\\. .*")) { // ID ve isim satırını yakala
+                if (satir.matches("\\d+\\. .*")) { 
                     String[] idVeIsim = satir.split(" ", 2);
                     int id = Integer.parseInt(idVeIsim[0].replace(".", ""));
                     String[] isimParcala = idVeIsim[1].split(" ");
                     String ad = isimParcala[0];
                     String soyad = isimParcala.length > 1 ? isimParcala[1] : "";
                     
-                    reader.readLine(); // "Tarih: " satırını oku
+                    reader.readLine(); 
                     String tarih = reader.readLine().replace("Tarih: ", "");
                     String saat = reader.readLine().replace("Saat: ", "");
-                    reader.readLine(); // "-----------------------------------" satırını oku
-                    
+                    reader.readLine(); 
                     LocalDateTime zaman = LocalDateTime.parse(tarih + " " + saat, formatter);
                     rezervasyonlar.add(new Rezervasyon(id, ad, soyad, zaman));
                 }
