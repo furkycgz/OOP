@@ -6,7 +6,7 @@ public class main {
     public static void main(String[] args) {
         RezervasyonYonetici yonetici = new RezervasyonYonetici();
         Scanner scanner = new Scanner(System.in);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
 
         while (true) {
             System.out.println("1. Rezervasyon Ekle");
@@ -28,7 +28,7 @@ public class main {
                     LocalDateTime zaman = null;
                     while (zaman == null) {
                         try {
-                            System.out.print("Rezervasyon tarihi (yyyy-MM-dd formatında): ");
+                            System.out.print("Rezervasyon tarihi (dd-MM-yyyy formatında): ");
                             String tarih = scanner.nextLine();
                             System.out.print("Rezervasyon saati (HH:mm formatında): ");
                             String saat = scanner.nextLine();
