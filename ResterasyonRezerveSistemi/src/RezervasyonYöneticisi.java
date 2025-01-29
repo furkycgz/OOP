@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -67,12 +68,13 @@ class RezervasyonYonetici {
     }
 
     private void dosyayaKaydet() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(dosyaYolu))) {
             for (Rezervasyon rezervasyon : rezervasyonlar) {
-                writer.write(rezervasyon.getId() + "," +
-                             rezervasyon.getMusteriAdi() + "," +
-                             rezervasyon.getMusteriSoyadi() + "," +
-                             rezervasyon.getRezervasyonZamani() + "\n");
+                writer.write(rezervasyon.getId() + ". " + rezervasyon.getMusteriAdi() + " " + rezervasyon.getMusteriSoyadi() + "\n" +
+                             "Tarih: " + rezervasyon.getRezervasyonZamani().toLocalDate().format(formatter) + "\n" +
+                             "Saat: " + rezervasyon.getRezervasyonZamani().toLocalTime() + "\n" +
+                             "-----------------------------------\n");
             }
         } catch (IOException e) {
             System.out.println("Dosyaya kaydedilirken bir hata oluştu: " + e.getMessage());
@@ -80,18 +82,28 @@ class RezervasyonYonetici {
     }
 
     private void dosyadanRezervasyonlariYukle() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
         try (BufferedReader reader = new BufferedReader(new FileReader(dosyaYolu))) {
             String satir;
             while ((satir = reader.readLine()) != null) {
-                String[] veri = satir.split(",");
-                int id = Integer.parseInt(veri[0]);
-                String ad = veri[1];
-                String soyad = veri[2];
-                LocalDateTime zaman = LocalDateTime.parse(veri[3]);
-                rezervasyonlar.add(new Rezervasyon(id, ad, soyad, zaman));
+                if (satir.matches("\\d+\\. .*")) { // ID ve isim satırını yakala
+                    String[] idVeIsim = satir.split(" ", 2);
+                    int id = Integer.parseInt(idVeIsim[0].replace(".", ""));
+                    String[] isimParcala = idVeIsim[1].split(" ");
+                    String ad = isimParcala[0];
+                    String soyad = isimParcala.length > 1 ? isimParcala[1] : "";
+                    
+                    reader.readLine(); // "Tarih: " satırını oku
+                    String tarih = reader.readLine().replace("Tarih: ", "");
+                    String saat = reader.readLine().replace("Saat: ", "");
+                    reader.readLine(); // "-----------------------------------" satırını oku
+                    
+                    LocalDateTime zaman = LocalDateTime.parse(tarih + " " + saat, formatter);
+                    rezervasyonlar.add(new Rezervasyon(id, ad, soyad, zaman));
+                }
             }
         } catch (IOException e) {
             System.out.println("Dosya okunurken bir hata oluştu: " + e.getMessage());
-        }
+        } 
     }
 }
